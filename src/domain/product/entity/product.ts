@@ -22,7 +22,7 @@ export default class Product implements ProductInterface {
         }
 
         if (this._price < 0) {
-            throw new Error("Price must be greater thna zero");
+            throw new Error("Price must be greater than zero");
         }
     }
 
