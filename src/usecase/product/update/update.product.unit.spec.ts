@@ -1,10 +1,10 @@
 import ProductFactory from "../../../domain/product/factory/product.factory";
 import UpdateProductUseCase from "./update.product.usecase";
 
-const priduct = ProductFactory.create("a", "Product a", 100);
+const product = ProductFactory.create("a", "Product a", 100);
   
   const input = {
-    id: priduct.id,
+    id: product.id,
     name: "Product a updated",
     price: 105
   };
@@ -13,7 +13,7 @@ const priduct = ProductFactory.create("a", "Product a", 100);
     return {
       create: jest.fn(),
       findAll: jest.fn(),
-      find: jest.fn().mockReturnValue(Promise.resolve(priduct)),
+      find: jest.fn().mockReturnValue(Promise.resolve(product)),
       update: jest.fn(),
     };
   };
